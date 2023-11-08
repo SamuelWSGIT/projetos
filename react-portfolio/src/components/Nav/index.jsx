@@ -10,8 +10,12 @@ import { motion } from "framer-motion"
 import { useState } from "react";
 
 const variants = {
-    open: { opacity: 1, y: 0 },
-    closed: { opacity: 0, y: "20%" },
+    open: {
+        opacity: 1, y: 0,
+    },
+    closed: {
+        opacity: 0, y: "20%",
+    },
 }
 
 export default function Navegacao() {
@@ -28,20 +32,22 @@ export default function Navegacao() {
                     animate={isOpen ? "open" : "closed"}
                     variants={variants}
                 >
-                    <ListaNavegacao>
-                        <ItemNavegacao link={"/"} icon={faHouse}>
-                            <p>Home</p>
-                        </ItemNavegacao>
-                        <ItemNavegacao link={"sobre"} icon={faClipboard}>
-                            <p>Sobre</p>
-                        </ItemNavegacao>
-                        <ItemNavegacao link={"contato"} icon={faUser}>
-                            <p>Contato</p>
-                        </ItemNavegacao>
-                        <ItemNavegacao icon={faFileArrowDown}>
-                            <p>Curriculo</p>
-                        </ItemNavegacao>
-                    </ListaNavegacao>
+                    {isOpen && (
+                        <ListaNavegacao >
+                            <ItemNavegacao link={"/"} icon={faHouse}>
+                                <p>Home</p>
+                            </ItemNavegacao>
+                            <ItemNavegacao link={"sobre"} icon={faClipboard}>
+                                <p>Sobre</p>
+                            </ItemNavegacao>
+                            <ItemNavegacao link={"contato"} icon={faUser}>
+                                <p>Contato</p>
+                            </ItemNavegacao>
+                            <ItemNavegacao icon={faFileArrowDown}>
+                                <p>Curriculo</p>
+                            </ItemNavegacao>
+                        </ListaNavegacao>
+                    )}
                 </motion.nav>
             </NavContainer>
         </>

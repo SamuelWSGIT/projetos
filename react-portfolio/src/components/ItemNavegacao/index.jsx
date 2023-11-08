@@ -26,14 +26,16 @@ export default function ItemNavegacao({ children, icon, link }) {
                             animate={isOpen ? "open" : "closed"}
                             variants={variants}
                         >
-                            <TextoAnimado children={children} />
+                            {isOpen && (
+                                <TextoAnimado children={children} />
+                            )}
                         </motion.div>
                         <IconContainer>
                             <FontAwesomeIcon className="fa-xl" icon={icon} />
                         </IconContainer>
                     </IconePersonalizado>
                 </ItensDaLista>
-            </Link>
+            </Link >
         </>
     )
 }
