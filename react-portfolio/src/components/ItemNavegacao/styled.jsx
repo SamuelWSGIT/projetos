@@ -19,5 +19,7 @@ export const IconContainer = styled.div`
   align-items: center;
   justify-content: center;
   border-radius: 5px;
-  background-color: #f1f1f1;
+  border: .1rem solid;
+  border-color: var(--color-primary);
+  background-color: var(--color-bg);
 `
