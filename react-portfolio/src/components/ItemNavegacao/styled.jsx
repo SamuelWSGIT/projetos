@@ -1,23 +1,23 @@
 import styled from "styled-components";
 
-
-
 export const ItensDaLista = styled.li`
-  background: #f1f1f1f1;
-  border-radius: 12px 12px 1cqh 12px;
-  padding: .5rem;
-  margin: .2rem 0;
-  display: flex;
-  justify-content: center;
+
 `;
 
 export const IconePersonalizado = styled.div`
   display: flex;
-  flex-direction: row-reverse;
-  justify-content: space-between;
-  padding: 0;
+  justify-content: end;
+  align-items: center;
+  gap: .2rem;
+  margin-bottom: .2rem;
 `;
 
-export const BotaoAnimado = styled.div`
-  padding-right: .5rem;
+export const IconContainer = styled.div`
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  background-color: #f1f1f1;
 `

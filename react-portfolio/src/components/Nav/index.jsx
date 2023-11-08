@@ -6,28 +6,43 @@ import { faUser } from "@fortawesome/free-solid-svg-icons"
 import { faFileArrowDown } from "@fortawesome/free-solid-svg-icons"
 import { faBars } from "@fortawesome/free-solid-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import { motion } from "framer-motion"
+import { useState } from "react";
+
+const variants = {
+    open: { opacity: 1, y: 0 },
+    closed: { opacity: 0, y: "20%" },
+}
 
 export default function Navegacao() {
+
+    const [isOpen, setIsOpen] = useState(false)
+
     return (
         <>
             <NavContainer>
-                <BotaoFixo>
+                <BotaoFixo onClick={() => setIsOpen(isOpen => !isOpen)}>
                     <FontAwesomeIcon className="fa-2x" icon={faBars} />
                 </BotaoFixo>
-                <ListaNavegacao>
-                    <ItemNavegacao icon={faHouse}>
-                        <p>Home</p>
-                    </ItemNavegacao>
-                    <ItemNavegacao icon={faClipboard}>
-                        <p>Test2</p>
-                    </ItemNavegacao>
-                    <ItemNavegacao icon={faUser}>
-                        <p>Test3</p>
-                    </ItemNavegacao>
-                    <ItemNavegacao icon={faFileArrowDown}>
-                        <p>Test4</p>
-                    </ItemNavegacao>
-                </ListaNavegacao>
+                <motion.nav
+                    animate={isOpen ? "open" : "closed"}
+                    variants={variants}
+                >
+                    <ListaNavegacao>
+                        <ItemNavegacao link={"/"} icon={faHouse}>
+                            <p>Home</p>
+                        </ItemNavegacao>
+                        <ItemNavegacao link={"sobre"} icon={faClipboard}>
+                            <p>Sobre</p>
+                        </ItemNavegacao>
+                        <ItemNavegacao link={"contato"} icon={faUser}>
+                            <p>Contato</p>
+                        </ItemNavegacao>
+                        <ItemNavegacao icon={faFileArrowDown}>
+                            <p>Curriculo</p>
+                        </ItemNavegacao>
+                    </ListaNavegacao>
+                </motion.nav>
             </NavContainer>
         </>
     )

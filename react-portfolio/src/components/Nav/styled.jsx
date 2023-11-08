@@ -5,7 +5,7 @@ export const NavContainer = styled.nav`
  flex-direction: column;
  right: 0;
  position: absolute;
- padding: .5rem;
+ padding: 1rem;
  align-items: end;
 `;
 
@@ -20,6 +20,8 @@ export const BotaoFixo = styled.button`
   border: none;
   background: none;
   margin: 0;
-  width: fit-content;
+  padding: 0;
+  width: 2rem;
+  height: 2rem;
   cursor: pointer;
 `;
