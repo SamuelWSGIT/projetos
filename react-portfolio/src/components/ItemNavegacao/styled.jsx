@@ -18,8 +18,10 @@ export const IconContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 5px;
-  border: .1rem solid;
-  border-color: var(--color-primary);
-  background-color: var(--color-bg);
+  border-radius: 50px;
+  border: .1rem;
+  background-color: var(--color-border);
+  &:hover{
+    background-color: var(--color-bg);
+  }
 `
