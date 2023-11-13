@@ -25,9 +25,13 @@ export default function NavegacaoBotao() {
     return (
         <>
             <NavegacaoBotaoContainer>
-                <BotaoFixo onClick={() => setIsOpen(isOpen => !isOpen)}>
-                    <FontAwesomeIcon className="fa-2x" icon={faBars} />
-                </BotaoFixo>
+                <motion.div
+                    whileHover={{ rotate: [0, 90] }}
+                >
+                    <BotaoFixo onClick={() => setIsOpen(isOpen => !isOpen)}>
+                        <FontAwesomeIcon className="fa-2x" icon={faBars} />
+                    </BotaoFixo>
+                </motion.div>
                 <motion.nav
                     animate={isOpen ? "open" : "closed"}
                     variants={variants}

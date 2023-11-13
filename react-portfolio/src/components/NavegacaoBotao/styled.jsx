@@ -5,6 +5,7 @@ export const NavegacaoBotaoContainer = styled.nav`
  flex-direction: column;
  align-items: center;
  padding: 1rem;
+ width: 2rem;
 `;
 
 export const ListaNavegacao = styled.ul`
