@@ -16,7 +16,8 @@ export const IconContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 50px;
+  padding: 0 .1rem;
+  border-radius: 50px 50px 50px 0px;
   border: .1rem;
   background-color: var(--color-border);
   &:hover{
