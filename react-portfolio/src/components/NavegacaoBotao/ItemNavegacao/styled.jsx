@@ -1,14 +1,12 @@
 import styled from "styled-components";
 
 export const ItensDaLista = styled.li`
-
+  
 `;
 
 export const IconePersonalizado = styled.div`
   display: flex;
-  justify-content: end;
   align-items: center;
-  gap: .2rem;
   margin-bottom: .2rem;
 `;
 

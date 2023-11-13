@@ -1,5 +1,5 @@
-import ItemNavegacao from "../ItemNavegacao";
-import { ListaNavegacao, NavContainer, BotaoFixo } from "./styled";
+import ItemNavegacao from "./ItemNavegacao";
+import { ListaNavegacao, NavegacaoBotaoContainer, BotaoFixo } from "./styled";
 import { faHouse } from "@fortawesome/free-solid-svg-icons"
 import { faClipboard } from "@fortawesome/free-solid-svg-icons"
 import { faUser } from "@fortawesome/free-solid-svg-icons"
@@ -18,13 +18,13 @@ const variants = {
     },
 }
 
-export default function Navegacao() {
+export default function NavegacaoBotao() {
 
     const [isOpen, setIsOpen] = useState(false)
 
     return (
         <>
-            <NavContainer>
+            <NavegacaoBotaoContainer>
                 <BotaoFixo onClick={() => setIsOpen(isOpen => !isOpen)}>
                     <FontAwesomeIcon className="fa-2x" icon={faBars} />
                 </BotaoFixo>
@@ -49,7 +49,7 @@ export default function Navegacao() {
                         </ListaNavegacao>
                     )}
                 </motion.nav>
-            </NavContainer>
+            </NavegacaoBotaoContainer>
         </>
     )
 }

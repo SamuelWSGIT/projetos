@@ -1,7 +1,7 @@
 import { IconContainer, IconePersonalizado, ItensDaLista } from "./styled";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { Link } from 'react-router-dom'
-import TextoAnimado from "../TextoAnimado";
+import TextoAnimado from "../../TextoAnimado";
 import { motion } from "framer-motion"
 import { useState } from "react";
 

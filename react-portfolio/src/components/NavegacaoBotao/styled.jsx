@@ -1,19 +1,18 @@
 import styled from "styled-components";
 
-export const NavContainer = styled.nav`
+export const NavegacaoBotaoContainer = styled.nav`
  display: flex;
  flex-direction: column;
+ align-items: center;
  right: 0;
- position: absolute;
  padding: 1rem;
- align-items: end;
+ width: 2rem;
 `;
 
 export const ListaNavegacao = styled.ul`
   list-style: none;
   padding: 0;
   margin: 0;
-  width: fit-content;
 `;
 
 export const BotaoFixo = styled.button`
